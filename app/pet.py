@@ -1,19 +1,15 @@
 from direct.actor.Actor import Actor
 
-
 class Phoenix:
     def __init__(self, render):
-        # Load the animated model
-        self.actor = Actor("assets/phoenix.glb")
+        self.actor = Actor("../assets/phoenix.glb")
 
-        # Attach it to the scene
+        print(self.actor)
+
         self.actor.reparentTo(render)
 
-        # Position
-        self.actor.setPos(0, 10, 0)
-
-        # Scale
-        self.actor.setScale(0.5)
+        self.actor.setScale(25)
+        self.actor.setPos(0, 50, 0)
 
     def play(self):
         # We'll discover the animation names shortly.
